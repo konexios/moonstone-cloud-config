@@ -1,0 +1,14 @@
+server:
+    port: 7925
+arrow:
+    apollo:
+        forgot:
+            mail:
+                subject: Your apollo temporary password - change your password on login
+                logo:
+                    paths: static/assets/img/Arrow_Worm_Apollo_lockup_h_2c_white_cmyk.png
+        password:
+            change:
+                mail:
+                    subject: Your apollo password changed successfully
+

@@ -1,0 +1,43 @@
+spring:
+    session:
+        store:
+            type: none
+    redis:
+        host: redis
+        jedis:
+            pool:
+                max-active: 10
+                max-idle: 10
+                max-wait: -1
+                min-idle: 5
+
+    cloud:
+        config:
+            allowOverride: true
+            overrideNone: true
+            overrideSystemProperties: false
+
+mail:
+    smtp:
+        auth:
+        starttls:
+        host:
+        port:
+        from:
+        userName:
+        password:
+
+server:
+    session:
+        timeout: 7200
+    ssl:
+        enabled: false
+    use-forward-headers: true
+    error:
+        include-exception: true
+
+pegasus:
+    local-cache-expires-hours: 12
+
+pegasus-local-api:
+    url: http://pegasus-local-api:7820

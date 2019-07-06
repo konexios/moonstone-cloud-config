@@ -1,0 +1,28 @@
+spring:
+    rabbitmq:
+        addresses: rabbitmq:5672
+        username: guest
+        password: guest
+        virtual-host: /
+    data:
+        mongodb:
+            uri: mongodb://admin:password@mongodb:27017/kronos?authSource=admin
+        elasticsearch:
+            cluster-name: moonstone
+            cluster-nodes: elasticsearch:9300
+            repositories:
+                enabled: true
+    kafka:
+        bootstrap-servers: kafka:9092
+        consumer:
+            auto-commit-interval: 10000
+            enable-auto-commit: true
+            group-id: dmp
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        producer:
+            acks: 0
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+rhea-private-api:
+    url: http://rhea-private-api:7821

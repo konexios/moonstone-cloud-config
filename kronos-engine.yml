@@ -1,0 +1,63 @@
+server:
+    port: -1
+    
+com:
+    arrow:
+        kronos:
+            AzureIotHubListener:
+                enabled: false
+            IbmMqttTelemetryListener:
+                enabled: false
+            AwsMqttTelemetryListener:
+                enabled: false
+            engine:
+                application-engine-id: 
+            processor:
+                LastTelemetryItemProcessor:
+                    enabled: true
+                    numThreads: 5
+                ActionProcessor:
+                    enabled: false
+                EsTelemetryProcessor:
+                    enabled: false
+                LocationProcessor:
+                    enabled: false
+                PersistenceProcessor:
+                    enabled: false
+                    
+MqttTelemetryListener:
+    enabled: true
+    numThreads: 5
+    
+TelemetryConsumer:
+    enabled: true
+    numThreads: 5
+    
+MqttApiRequestListener:
+    enabled: false
+
+NoTelemetryCron:
+    enabled: false
+
+ibm:
+    account:
+        refresh-interval: 60
+    mqtt:
+        server-url: ssl://{organizationId}.messaging.internetofthings.ibmcloud.com:8883
+        topic: iot-2/type/+/id/+/evt/telemetry/fmt/json
+        client-id: 'a:{organizationId}:kronos-engine-default'
+        connection-timeout: 60
+        keep-alive-interval: 60
+        
+azure:
+    account:
+        refresh-interval: 60
+    receiver:
+        timeout: 5
+        max-event-count: 10
+        
+aws:
+    account:
+        refresh-interval: 60
+    mqtt:
+        topic: telemetries/devices/+

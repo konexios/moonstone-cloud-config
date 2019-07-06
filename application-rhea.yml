@@ -1,0 +1,4 @@
+spring:
+    data:
+        mongodb:
+            uri: mongodb://admin:password@mongodb:27017/rhea?authSource=admin

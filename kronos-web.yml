@@ -1,0 +1,9 @@
+server:
+    port: 7921
+    
+com:
+    arrow:
+        kronos:
+            deviceWsApi:
+                fromBufferSeconds: 120
+                toBufferSeconds: 120

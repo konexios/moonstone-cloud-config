@@ -1,0 +1,27 @@
+server:
+    port: -1
+
+SoftwareReleaseScheduleCron:
+    cron: 0 */1 * * * *
+    toAddresses: sysadmin@arrowconnect.io
+    reportSubject: SoftwareReleaseScheduleCron
+    enabled: true
+
+SoftwareReleaseScheduleMonitorCron:
+    cron: 0 */1 * * * *
+    toAddresses: sysadmin@arrowconnect.io
+    reportSubject: SoftwareReleaseScheduleMonitorCron
+    enabled: true
+
+KronosApplicationMonitorCron:
+    cron: 0 */5 * * * *
+    toAddresses: sysadmin@arrowconnect.io
+    reportSubject: KronosApplicationMonitorCron
+    enabled: true
+    zone: default-zone
+
+EventExpireAccountCron:
+    cron: 0 * * * * *
+    toAddresses: sysadmin@arrowconnect.io
+    reportSubject: EventExpireAccountCron
+    enabled: false
