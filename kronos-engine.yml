@@ -15,23 +15,27 @@ com:
             processor:
                 LastTelemetryItemProcessor:
                     enabled: true
-                    numThreads: 5
+                    numThreads: 2
                 ActionProcessor:
-                    enabled: false
+                    enabled: true
+                    numThreads: 2
                 EsTelemetryProcessor:
-                    enabled: false
+                    enabled: true
+                    numThreads: 2
                 LocationProcessor:
-                    enabled: false
+                    enabled: true
+                    numThreads: 2
                 PersistenceProcessor:
-                    enabled: false
+                    enabled: true
+                    numThreads: 2
                     
 MqttTelemetryListener:
     enabled: true
-    numThreads: 5
+    numThreads: 2
     
 TelemetryConsumer:
     enabled: true
-    numThreads: 5
+    numThreads: 2
     
 MqttApiRequestListener:
     enabled: false
